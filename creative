@@ -1,0 +1,13 @@
+#!/bin/bash
+
+flatpak install com.github.libresprite.LibreSprite
+
+flatpak install org.blender.Blender
+cd ~/Downloads
+wget https://github.com/Radivarig/UvSquares/archive/master.zip
+
+sudo apt install -y krita
+sudo apt install -y gimp
+sudo apt install -y inkscape
+sudo apt install -y audacity
+sudo apt install -y lmms
