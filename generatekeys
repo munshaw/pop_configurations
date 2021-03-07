@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Edit this script before running."
+exit # Comment this out
+
+ssh-keygen -t ed25519 -C "email@example.com" # Change this email
+ssh-agent -s
+ssh-add ~/.ssh/id_ed25519
+
+
+gpg --full-generate-key # Recommend 4k RSA key
+gpg --armor --export
+gpg --list-keys
+
+echo "Run \`git config --global user.signingkey <Key code>\`."
