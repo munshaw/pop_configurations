@@ -11,3 +11,4 @@ sudo apt install -y gimp
 sudo apt install -y inkscape
 sudo apt install -y audacity
 sudo apt install -y lmms
+sudo apt install -y obs-studio
