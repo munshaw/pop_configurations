@@ -1,15 +1,25 @@
 #!/bin/bash
 
-echo "Edit this script before running."
+echo "To import keys:"
+echo "SSH Public: ~/.ssh/id_ed25519.pub"
+echo "SSH Private: ~/.ssh/id_ed25519"
+echo "GPG Public: \`gpg --import public.key\`"
+echo "GPG Private: \`gpg --import private.key\`"
+echo "Run: \` ssh-agent -s\`"
+echo "Run: \`ssh-add ~/.ssh/id_ed25519\`"
+echo "Run: \`gpg --list-keys\`"
+echo "Run: \`git config --global user.signingkey <Key code>\`."
+echo "To export GPG:"
+echo "Run: \`gpg --export --armor && gpg --export-secret-keys --armor\`"
+
+echo "Edit this script to create new configuration."
 exit # Comment this out
 
 ssh-keygen -t ed25519 -C "email@example.com" # Change this email
 ssh-agent -s
 ssh-add ~/.ssh/id_ed25519
 
-
 gpg --full-generate-key # Recommend 4k RSA key
-gpg --armor --export
 gpg --list-keys
 
-echo "Run \`git config --global user.signingkey <Key code>\`."
+echo "Run: \`git config --global user.signingkey <Key code>\`."
