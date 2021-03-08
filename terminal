@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+sudo apt install -y neovim
+suto apt install -y tmux
+sudo apt install -y traceroute
+sudo apt install -y build-essential
