@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 sudo apt install -y texlive-full
 sudo apt install -y scribus
 sudo apt install -y pdfarranger

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 flatpak install org.geogebra.GeoGebra
 
 sudo apt install -y wxmaxima

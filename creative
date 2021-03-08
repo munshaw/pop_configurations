@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 flatpak install com.github.libresprite.LibreSprite
 
 flatpak install org.blender.Blender
