@@ -6,3 +6,5 @@ sudo apt install -y neovim
 suto apt install -y tmux
 sudo apt install -y traceroute
 sudo apt install -y build-essential
+
+echo "Consider adding a \`\\n\` to PS1 in ~/.bashrc"
