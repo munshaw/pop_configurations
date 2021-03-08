@@ -3,3 +3,4 @@
 flatpak install org.geogebra.GeoGebra
 
 sudo apt install -y wxmaxima
+sudo apt install -y xcas
