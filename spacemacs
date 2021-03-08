@@ -14,4 +14,14 @@ cd emacs
 ./configure --with-native-compilation --with-x-toolkit=gtk3 --with-cairo --with-xwidgets --with-json
 make -j$((`nproc`+1))
 sudo make install
+
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+echo "Give spacemacs some time to compile everything"
+emacs
+
+systemctl --user enable emacs.service
+systemctl --user start emacs.service
+
+echo "Run spacemacs via the emacsclient"
+echo ""
