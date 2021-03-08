@@ -9,5 +9,4 @@ sudo apt install -y mesa-utils
 sudo apt install -y vlc
 sudo apt install -y rhythembox
 sudo apt install -y epiphany-browser
-sudo apt install -y fonts-firacode
 sudo apt install -y cheese

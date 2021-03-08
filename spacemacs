@@ -2,6 +2,8 @@
 
 set -e
 
+sudo apt install -y fonts-firacode
+
 sudo apt build-dep -y emacs
 sudo apt install -y libgnutls28-dev libwebkit2gtk-4.0-dev mailutils libgccjit-10-dev libjansson-dev 
 
