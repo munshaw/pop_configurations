@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt install -y default-jre
+sudo apt install -y texlive-full
 
 cd ~/.emacs.d/private
 curl -L https://raw.githubusercontent.com/languagetool-org/languagetool/master/install.sh | bash

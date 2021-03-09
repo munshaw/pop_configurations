@@ -2,7 +2,6 @@
 
 set -e
 
-sudo apt install -y texlive-full
 sudo apt install -y scribus
 sudo apt install -y pdfarranger
 sudo apt install -y ubuntustudio-fonts
