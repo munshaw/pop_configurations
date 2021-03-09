@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo apt install -y default-jre
+
+cd ~/.emacs.d/private
+curl -L https://raw.githubusercontent.com/languagetool-org/languagetool/master/install.sh | bash
+
+echo "Add the following layers to .spacemacs:"
+echo "org"
+echo "speed-reading"
+echo "(languagetool :variables langtool-language-tool-jar \"~/.emacs.d/private/LanguageTool-5.2-stable/languagetool-commandline.jar\")"
+echo "Add the following additional package:"
+echo "writegood-mode"
