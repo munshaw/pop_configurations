@@ -5,3 +5,6 @@ sudo apt install -y ssh
 sudo apt install -y filezilla
 sudo apy install -y virtualbox
 sudo apt install -y virtualbox-guest-additions-iso
+
+echo "Windows Download: https://www.microsoft.com/en-ca/software-download/windows10ISO"
+echo "Activation: https://gist.github.com/amanjuman/464853dd36dd94ebc42bc2057a3aa6a5"
