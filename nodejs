@@ -9,4 +9,4 @@ nvm install node
 echo "Add the following layers to .spacemacs:"
 echo "(javascript :variables js2-basic-offset 2 js-indent-level 2)"
 echo "(typescript :variables typescript-fmt-on-save t typescript-indent-level 2)"
-echo "Do not select eslint as your linter"
+echo "Do not select eslint as your backend"

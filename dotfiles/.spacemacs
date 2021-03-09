@@ -43,7 +43,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
-     (lsp :variables lsp-headerline-breadcrumb-mode 'f)
+     (lsp :variables lsp-headerline-breadcrumb-enable nil)
      markdown
      multiple-cursors
      ;; org
@@ -541,6 +541,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
+ '(warning-suppress-log-types '((comp))
  '(warning-suppress-types '((comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
