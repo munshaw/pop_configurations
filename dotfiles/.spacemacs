@@ -43,10 +43,10 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
-     lsp
+     (lsp :variables lsp-headerline-breadcrumb-mode 'f)
      markdown
      multiple-cursors
-     org
+     ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -67,7 +67,8 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+     exec-path-from-shell)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -524,7 +525,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (global-column-enforce-mode))
+  (global-column-enforce-mode)
+  (exec-path-from-shell-initialize))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

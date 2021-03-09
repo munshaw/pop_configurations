@@ -1,0 +1,12 @@
+#!/bin/bash -i
+
+set -e
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+source ~/.bashrc
+nvm install node
+
+echo "Add the following layers to .spacemacs:"
+echo "(javascript :variables js2-basic-offset 2 js-indent-level 2)"
+echo "(typescript :variables typescript-fmt-on-save t typescript-indent-level 2)"
+echo "Do not select eslint as your linter"
