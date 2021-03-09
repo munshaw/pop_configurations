@@ -10,3 +10,4 @@ sudo apt install -y vlc
 sudo apt install -y rhythmbox
 sudo apt install -y epiphany-browser
 sudo apt install -y cheese
+sudo apt install -y gufw
