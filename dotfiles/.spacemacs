@@ -219,7 +219,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(doom-one
+                         spacemacs-dark
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -450,7 +451,7 @@ It should only modify the values of Spacemacs settings."
    ;; %z - mnemonics of buffer, terminal, and keyboard coding systems
    ;; %Z - like %z, but including the end-of-line format
    ;; (default "%I@%S")
-   dotspacemacs-frame-title-format "%I@%S"
+   dotspacemacs-frame-title-format "spacemacs"
 
    ;; Format specification for setting the icon title format
    ;; (default nil - same as frame-title-format)
