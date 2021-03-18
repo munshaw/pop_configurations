@@ -1,4 +1,4 @@
-Pop!_OS Layers
+Pop!_OS Configurations
 ---
 
 This is a series of bash scripts that remind me how I set up different

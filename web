@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Install the NodeJS layer"
+echo "Install the NodeJS configuration"
 echo "Add the following layer to .spacemacs:"
 echo "(html :variables web-mode-markup-indent-offset 2"
 echo "                 web-mode-css-indent-offset 2"
