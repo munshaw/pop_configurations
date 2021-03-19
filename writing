@@ -6,6 +6,5 @@ sudo apt install -y texlive-full
 cd ~/.emacs.d/private
 curl -L https://raw.githubusercontent.com/languagetool-org/languagetool/master/install.sh | bash
 
-echo "Add the following layer to .spacemacs:"
-echo "(languagetool :variables langtool-language-tool-jar \"~/.emacs.d/private/LanguageTool-X.X-stable/languagetool-commandline.jar\")"
+echo "Add the following layer to .spacemacs: languagetool"
 echo "Configure language tool with languagetool.jar"
