@@ -32,7 +32,17 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(shell-scripts
+   '(
+     shell-scripts
+     ;(javascript :variables js2-basic-offset 2 js-indent-level 2)
+     ;(typescript :variables typescript-fmt-on-save t typescript-indent-level 2)
+     ;(html :variables
+     ;      web-mode-markup-indent-offset 2
+     ;      web-mode-css-indent-offset 2
+     ;      web-mode-code-indent-offset 2
+     ;      css-indent-offset 2
+     ;      css-enable-lsp 't
+     ;      html-enable-lsp 't)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -46,18 +56,20 @@ This function should only modify configuration layer settings."
      (lsp :variables lsp-headerline-breadcrumb-enable nil)
      markdown
      multiple-cursors
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
      ;; version-control
-     treemacs
+     ;;treemacs
      themes-megapack
      colors
      pdf
-     multiple-cursors)
+     multiple-cursors
+     speed-reading
+     ;(languagetool :variables langtool-language-tool-jar "~/.emacs.d/private/LanguageTool-5.2-stable/languagetool-commandline.jar"))
 
    ;; List of additional packages that will be installed without being wrapped
    ;; in a layer (generally the packages are installed only and should still be
@@ -68,7 +80,9 @@ This function should only modify configuration layer settings."
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
-     exec-path-from-shell)
+     exec-path-from-shell
+     writegood-mode
+   )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -542,12 +556,12 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(evil-want-Y-yank-to-eol nil)
- '(warning-suppress-log-types '((comp))
+ '(warning-suppress-log-types '((comp)))
  '(warning-suppress-types '((comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil)))))
 )
