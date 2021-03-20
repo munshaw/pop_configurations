@@ -150,3 +150,7 @@ echo "Run: \`git config --global user.signingkey <Key code>\`."
 echo
 echo "To export GPG:"
 echo "Run: \`gpg --export --armor && gpg --export-secret-keys --armor\`"
+echo
+echo "Reminders:"
+echo "Check languagetool path"
+echo "Set up firewall"
