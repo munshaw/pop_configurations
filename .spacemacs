@@ -32,17 +32,15 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
-     shell-scripts
-     ;(javascript :variables js2-basic-offset 2 js-indent-level 2)
-     ;(typescript :variables typescript-fmt-on-save t typescript-indent-level 2)
-     ;(html :variables
-     ;      web-mode-markup-indent-offset 2
-     ;      web-mode-css-indent-offset 2
-     ;      web-mode-code-indent-offset 2
-     ;      css-indent-offset 2
-     ;      css-enable-lsp 't
-     ;      html-enable-lsp 't)
+   '(shell-scripts
+     (javascript :variables js2-basic-offset 2 js-indent-level 2)
+     (typescript :variables typescript-fmt-on-save t typescript-indent-level 2)
+     (html :variables web-mode-markup-indent-offset 2
+           web-mode-css-indent-offset 2
+           web-mode-code-indent-offset 2
+           css-indent-offset 2
+           css-enable-lsp 't
+           html-enable-lsp 't)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -55,10 +53,10 @@ This function should only modify configuration layer settings."
      helm
      (lsp :variables lsp-headerline-breadcrumb-enable nil)
      markdown
+     csv
+     json
      multiple-cursors
      org
-     json
-     csv
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -71,7 +69,7 @@ This function should only modify configuration layer settings."
      pdf
      multiple-cursors
      speed-reading
-     ;(languagetool :variables langtool-language-tool-jar "~/.emacs.d/private/LanguageTool-5.2-stable/languagetool-commandline.jar"))
+     (languagetool :variables langtool-language-tool-jar "~/.emacs.d/private/LanguageTool-5.2-stable/languagetool-commandline.jar"))
 
    ;; List of additional packages that will be installed without being wrapped
    ;; in a layer (generally the packages are installed only and should still be

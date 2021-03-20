@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo "Install the NodeJS configuration"
-echo "Add the following layer to .spacemacs: html"
