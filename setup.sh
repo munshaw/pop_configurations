@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 set -e
 
@@ -82,6 +82,8 @@ sudo apt install -y build-essential
 ##########
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+source ~/.bashrc
+nvm install node
 
 #############
 # Spacemacs #
@@ -129,8 +131,6 @@ popd
 ############
 # Messages #
 ############
-
-echo "To in"
 
 echo "To create new keys:"
 echo "Run: \`ssh-keygen -t ed25519 -C \"email@example.com\" \`"
