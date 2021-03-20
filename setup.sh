@@ -24,7 +24,7 @@ sudo apt install -y obs-studio
 sudo apt install -y virtualbox
 sudo apt install -y ssh
 sudo apt install -y filezilla
-sudo apy install -y virtualbox
+sudo apt install -y virtualbox
 sudo apt install -y virtualbox-guest-additions-iso
 
 ############
@@ -73,7 +73,7 @@ sudo apt install -y ubuntustudio-fonts
 ############
 
 sudo apt install -y neovim
-suto apt install -y tmux
+sudo apt install -y tmux
 sudo apt install -y traceroute
 sudo apt install -y build-essential
 
@@ -82,8 +82,6 @@ sudo apt install -y build-essential
 ##########
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-source ~/.bashrc
-nvm install node
 
 #############
 # Spacemacs #
@@ -132,6 +130,8 @@ popd
 # Messages #
 ############
 
+echo "To in"
+
 echo "To create new keys:"
 echo "Run: \`ssh-keygen -t ed25519 -C \"email@example.com\" \`"
 echo "Run: \`gpg --full-generate-key # 4k RSA\`"
@@ -150,3 +150,6 @@ echo "Run: \`git config --global user.signingkey <Key code>\`."
 echo
 echo "To export GPG:"
 echo "Run: \`gpg --export --armor && gpg --export-secret-keys --armor\`"
+echo
+echo "Install node in new terminal:"
+echo "Run: \`nvm install node\`"
