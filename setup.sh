@@ -150,6 +150,3 @@ echo "Run: \`git config --global user.signingkey <Key code>\`."
 echo
 echo "To export GPG:"
 echo "Run: \`gpg --export --armor && gpg --export-secret-keys --armor\`"
-echo
-echo "Install node in new terminal:"
-echo "Run: \`nvm install node\`"
