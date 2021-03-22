@@ -82,6 +82,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages '(
      exec-path-from-shell
      writegood-mode
+     fira-code-mode
    )
 
    ;; A list of packages that cannot be updated.
@@ -541,7 +542,8 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (global-column-enforce-mode)
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
+  (global-fira-code-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

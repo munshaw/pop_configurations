@@ -111,6 +111,11 @@ popd
 cp .spacemacs ~
 
 # Compile everything else
+echo "################"
+echo "################"
+echo "################"
+echo "Opening emacs for the first time to install packages"
+echo "Install Fira Code Symbol with M-x fira-code-mode-install-fonts"
 emacs
 
 # Run via emacsclient
