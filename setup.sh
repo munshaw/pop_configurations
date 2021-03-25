@@ -101,7 +101,7 @@ git checkout feature/native-comp
 git checkout master
 git merge feature/native-comp --no-commit
 ./autogen.sh
-./configure --with-native-compilation --with-xwidgets --with-json
+./configure --with-native-compilation --with-json
 make -j$((`nproc`+1))
 sudo make install
 
