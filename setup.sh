@@ -69,6 +69,11 @@ function install_node {
     nvm install node
 }
 
+function update_node {
+    nvm install node --reinstall-packages-from=node
+    nvm install-latest-npm
+}
+
 function install_emacs {
     sudo apt install -y fonts-firacode
 
@@ -97,6 +102,31 @@ function install_emacs {
 
     systemctl --user enable emacs.service
     systemctl --user start emacs.service
+}
+
+function update_emacs {
+    pushd ~/Downloads/emacs
+    git reset --hard
+    rm -r native-lisp
+    git checkout feature/native-comp
+    git pull
+    git checkout master
+    git pull
+    git merge feature/native-comp --no-commit
+    ./autogen.sh
+    ./configure --with-native-compilation --with-json
+    make -j$((`nproc`+1))
+    sudo make install
+
+    cd ~/.emacs.d
+    git pull
+
+    popd
+    cp .spacemacs ~
+
+    systemctl --user daemon-reload
+    systemctl --user restart emacs.service
+    echo "Remember to update packages in spacemacs"
 }
 
 function install_writing {
@@ -144,7 +174,9 @@ function help {
     echo "install_office     Install office packages"
     echo "install_terminal   Install terminal apps"
     echo "install_node       Install nodejs"
+    echo "update_node        Update nodejs"
     echo "install_emacs      Install emacs"
+    echo "install_emacs      Update emacs"
     echo "install_writing    Install emacs writing settings"
 }
 
@@ -191,8 +223,14 @@ case $1 in
     install_node)
         install_node
         ;;
+    update_node)
+        update_node
+        ;;
     install_emacs)
         install_emacs
+        ;;
+    update_emacs)
+        update_emacs
         ;;
     install_writing)
         install_writing
