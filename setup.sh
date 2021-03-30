@@ -176,7 +176,7 @@ function help {
     echo "install_node       Install nodejs"
     echo "update_node        Update nodejs"
     echo "install_emacs      Install emacs"
-    echo "install_emacs      Update emacs"
+    echo "update_emacs      Update emacs"
     echo "install_writing    Install emacs writing settings"
 }
 
