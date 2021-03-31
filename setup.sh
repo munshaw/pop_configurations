@@ -74,6 +74,17 @@ function update_node {
     nvm install-latest-npm
 }
 
+function install_mongo {
+    wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+    sudo apt update
+    sudo apt install mongodb-org
+    pushd ~/Downloads
+    wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.0_amd64.deb
+    sudo dpkg -i mongodb-compass_1.26.0_amd64.deb
+    popd
+}
+
 function install_emacs {
     sudo apt install -y fonts-firacode
 
@@ -174,6 +185,7 @@ function help {
     echo "install_office     Install office packages"
     echo "install_terminal   Install terminal apps"
     echo "install_node       Install nodejs"
+    echo "install_mongo      Install mongodb"
     echo "update_node        Update nodejs"
     echo "install_emacs      Install emacs"
     echo "update_emacs      Update emacs"
@@ -197,6 +209,7 @@ case $1 in
         install_node
         install_emacs
         install_writing
+        install_mongo
         print_message
         ;;
     install_desktop)
@@ -225,6 +238,9 @@ case $1 in
         ;;
     update_node)
         update_node
+        ;;
+    install_mongo)
+        install_mongo
         ;;
     install_emacs)
         install_emacs
