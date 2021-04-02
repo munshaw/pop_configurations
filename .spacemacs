@@ -33,12 +33,12 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(shell-scripts
-     (javascript :variables js2-basic-offset 2 js-indent-level 2)
-     (typescript :variables typescript-fmt-on-save t typescript-indent-level 2)
-     (html :variables web-mode-markup-indent-offset 2
+     javascript
+     (typescript :variables typescript-fmt-on-save t)
+     (html :variables
+           web-mode-markup-indent-offset 2
            web-mode-css-indent-offset 2
            web-mode-code-indent-offset 2
-           css-indent-offset 2
            css-enable-lsp 't
            html-enable-lsp 't)
      ;; ----------------------------------------------------------------
