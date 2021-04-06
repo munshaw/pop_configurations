@@ -188,7 +188,7 @@ function help {
     echo "install_mongo      Install mongodb"
     echo "update_node        Update nodejs"
     echo "install_emacs      Install emacs"
-    echo "update_emacs      Update emacs"
+    echo "update_emacs       Update emacs"
     echo "install_writing    Install emacs writing settings"
 }
 
