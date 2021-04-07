@@ -150,9 +150,9 @@ function install_writing {
 }
 
 function install_rust {
-    #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source ~/.bashrc
-    sudo apt install libssl-dev
+    sudo apt install lldb
     cargo install cargo-edit
     cargo install cargo-audit
     pushd ~/Downloads
