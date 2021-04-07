@@ -149,6 +149,30 @@ function install_writing {
     popd
 }
 
+function install_rust {
+    #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    source ~/.bashrc
+    sudo apt install libssl-dev
+    cargo install cargo-edit
+    cargo install cargo-audit
+    pushd ~/Downloads
+    git clone https://github.com/rust-analyzer/rust-analyzer.git
+    cd rust-analyzer
+    cargo xtask install --server
+    popd
+}
+
+function update_rust {
+    rustup update
+    cargo install cargo-edit
+    cargo install cargo-audit
+    pushd ~/Downloads
+    cd rust-analyzer
+    git pull
+    cargo xtask install --server
+    popd
+}
+
 function print_message {
     echo "To create new keys:"
     echo "Run: \`ssh-keygen -t ed25519 -C \"email@example.com\" \`"
@@ -190,6 +214,8 @@ function help {
     echo "install_emacs      Install emacs"
     echo "update_emacs       Update emacs"
     echo "install_writing    Install emacs writing settings"
+    echo "install_rust       Install Rust"
+    echo "update_rust        Update Rust"
 }
 
 if [[ $# -eq 0 ]]
@@ -210,6 +236,7 @@ case $1 in
         install_emacs
         install_writing
         install_mongo
+        install_rust
         print_message
         ;;
     install_desktop)
@@ -250,5 +277,11 @@ case $1 in
         ;;
     install_writing)
         install_writing
+        ;;
+    install_rust)
+        install_rust
+        ;;
+    update_rust)
+        update_rust
         ;;
 esac

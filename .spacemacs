@@ -42,6 +42,7 @@ This function should only modify configuration layer settings."
            css-indent-offset 2
            css-enable-lsp 't
            html-enable-lsp 't)
+     rust
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -52,7 +53,9 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
-     (lsp :variables lsp-headerline-breadcrumb-enable nil)
+     (lsp :variables
+          lsp-headerline-breadcrumb-enable nil
+          lsp-rust-server 'rust-analyzer)
      markdown
      csv
      json
