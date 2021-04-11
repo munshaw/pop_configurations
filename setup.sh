@@ -155,7 +155,8 @@ function install_rust {
     sudo apt install lldb
     cargo install cargo-edit
     cargo install cargo-audit
-    cargo-install wasm-pack
+    cargo install wasm-pack
+    cargo install miniserve
     pushd ~/Downloads
     git clone https://github.com/rust-analyzer/rust-analyzer.git
     cd rust-analyzer
@@ -168,6 +169,7 @@ function update_rust {
     cargo install cargo-edit
     cargo install cargo-audit
     cargo install wasm-pack
+    cargo install miniserve
     pushd ~/Downloads
     cd rust-analyzer
     git pull
