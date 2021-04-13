@@ -40,6 +40,7 @@ function install_creative {
     sudo apt install -y inkscape
     sudo apt install -y audacity
     sudo apt install -y lmms
+    sudo apt install -y ffmpeg
     popd
 }
 
